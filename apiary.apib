@@ -7,10 +7,21 @@ Supplies API is a service used to find supplies for Zebra printers.
 # Group Supplies
 Supply related resources of the **Supplies API**
 
-# Supply
-+ Model (text/plain)
+## Supply [/supplies]
 
-        Hello World
++ Model (application/json)
+
+    + Body
+
+            {
+              "class": [ "message" ],
+              "properties": { 
+                    "message": "Hello World!" 
+              },
+              "links": [
+                    { "rel": "self" , "href": "/message" }
+              ]
+            }
     
 ## Supplies Collection [/supplies{?page,?pageSize,?sortBy,?sort,?type,?printer,?mediaType,?width,?length,?distanceUnit,?printTech,?chemResist,?env,?maxTemp,?minTemp,?tempUnit,?adhesive,?surface,?surfaceShape,?surfaceCond,?acceptance}]
 ### List all Supplies [GET]
