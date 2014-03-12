@@ -32,21 +32,11 @@ Supply related resources of the **Supplies API**
 
     [Supply][]
 
-## Supplies Collection [/supplies{?page,?pageSize,?sortBy,?sort,?type,?printer,?mediaType,?width,?length,?distanceUnit,?printTech,?chemResist,?env,?maxTemp,?minTemp,?tempUnit,?adhesive,?surface,?surfaceShape,?surfaceCond,?acceptance}]
-
-+ Model (application/json)
-
-    + Body
-
-            {
-              "data": [
-                    { }
-              ]
-            }
+## Supplies Collection [/supplies{?page,pageSize,sortBy,sort,type,printer,mediaType,width,length,distanceUnit,printTech,chemResist,env,maxTemp,minTemp,tempUnit,adhesive,surface,surfaceShape,surfaceCond,acceptance}]
             
 + Parameters
-    - page = `1` (optional, number, `1`) 
-    - pageSize = `10` (optional, number, `10`)
+    - page = `1` (optional, integer, `1`) 
+    - pageSize = `10` (optional, integer, `10`)
     - sortBy (optional, string, `width, length, perforation`)
     - sort (optional, string)
         + Values
@@ -55,8 +45,8 @@ Supply related resources of the **Supplies API**
     - type (required, string, `media, ribbon`)
     - printer (required, string, `105SL`) 
     - mediaType (required, string, `paper, synthetic`)
-    - width (optional, number, `11.10`)
-    - length (optional, number, `12.30`)
+    - width (optional, float, `11.10`)
+    - length (optional, float, `12.30`)
     - distanceUnit (optional, string)
         + Values
             + `metric`
@@ -64,8 +54,8 @@ Supply related resources of the **Supplies API**
     - printTech (optional, string, `DT, TT`)
     - chemResist (required, string, `none, weak, medium, strong`)
     - env (required, string, `indoor, outdoor`)
-    - maxTemp (required, number, `-10`)
-    - minTemp (required, number, `40`)
+    - maxTemp (required, integer, `-10`)
+    - minTemp (required, integer, `40`)
     - tempUnit (required, string)
         + Values
             + `C`
@@ -83,6 +73,16 @@ Supply related resources of the **Supplies API**
 + Headers
     
         Accept-Language: en-US
+
++ Model (application/json)
+
+    + Body
+
+            {
+              "data": [
+                    { }
+              ]
+            }
 
 ### List all Supplies [GET]
 + Response 200
