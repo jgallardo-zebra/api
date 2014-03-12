@@ -9,14 +9,10 @@ Supply related resources of the **Supplies API**
 
 ## Supplies Collection [/supplies{?page,?pageSize,?sortBy,?sort,?type,?printer,?mediaType,?width,?length,?distanceUnit,?printTech,?chemResist,?env,?maxTemp,?minTemp,?tempUnit,?adhesive,?surface,?surfaceShape,?surfaceCond,?acceptance}]
 ### List all Supplies [GET]
-+ Headers
-
-    Accept=application/json
-    Accept-Language=en-US
 
 + Parameters
-    - page (optional, number, `1`) ... Numeric `page` number of the search result list.
-    - pageSize (optional, number, `10`) ... Numeric `pageSize`
+    - page = `1` (optional, number, `1`) ... Numeric `page` number of the search result list.
+    - pageSize = `10` (optional, number, `10`) ... Numeric `pageSize`
     - sortBy (optional, string, `width, length, perforation`)
     - sort (optional, string, `asc, desc`)
     - type (required, string, `media, ribbon`)
@@ -35,7 +31,17 @@ Supply related resources of the **Supplies API**
     - surface (optional, string, `paper, plastic`)
     - surfaceShape (optional, string, `smooth, rough`)
     - surfaceCond (optional, string, `smooth, rough`)
-    - acceptance (optional, string, `none, CSA, UL`)
+    - acceptance (optional, string)
+        + Values
+            + `none`
+            + `CSA`
+            + `UL`
+            
++ Request
+    + Headers
+    
+            Accept-Language: en-US
+    
 
 + Response 200 (application/json)
 
