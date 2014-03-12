@@ -7,26 +7,40 @@ Supplies API is a service used to find supplies for Zebra printers.
 # Group Supplies
 Supply related resources of the **Supplies API**
 
+# Supply
++ Model (text/plain)
+
+        Hello World
+    
 ## Supplies Collection [/supplies{?page,?pageSize,?sortBy,?sort,?type,?printer,?mediaType,?width,?length,?distanceUnit,?printTech,?chemResist,?env,?maxTemp,?minTemp,?tempUnit,?adhesive,?surface,?surfaceShape,?surfaceCond,?acceptance}]
 ### List all Supplies [GET]
 
 + Parameters
-    - page = `1` (optional, number, `1`) ... Numeric `page` number of the search result list.
-    - pageSize = `10` (optional, number, `10`) ... Numeric `pageSize`
+    - page = `1` (optional, number, `1`) 
+    - pageSize = `10` (optional, number, `10`)
     - sortBy (optional, string, `width, length, perforation`)
-    - sort (optional, string, `asc, desc`)
+    - sort (optional, string)
+        + Values
+            + `asc`
+            + `desc`
     - type (required, string, `media, ribbon`)
     - printer (required, string, `105SL`) 
     - mediaType (required, string, `paper, synthetic`)
     - width (optional, number, `11.10`)
     - length (optional, number, `12.30`)
-    - distanceUnit (optional, string, `metric, imperial`)
+    - distanceUnit (optional, string)
+        + Values
+            + `metric`
+            + `imperial`
     - printTech (optional, string, `DT, TT`)
     - chemResist (required, string, `none, weak, medium, strong`)
     - env (required, string, `indoor, outdoor`)
     - maxTemp (required, number, `-10`)
     - minTemp (required, number, `40`)
-    - tempUnit (required, string, `C, F`)
+    - tempUnit (required, string)
+        + Values
+            + `C`
+            + `F`
     - adhesive (optional, string, `permanent, removable`)
     - surface (optional, string, `paper, plastic`)
     - surfaceShape (optional, string, `smooth, rough`)
@@ -37,18 +51,11 @@ Supply related resources of the **Supplies API**
             + `CSA`
             + `UL`
             
-+ Request
-    + Headers
++ Headers
     
-            Accept-Language: en-US
-    
+        Accept-Language: en-US
+
 
 + Response 200 (application/json)
 
-        [{
-          "id": 1, 
-          "name": "one name",
-          "description": "one description"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
+        [Supply][]
