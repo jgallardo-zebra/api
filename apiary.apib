@@ -9,6 +9,10 @@ Supply related resources of the **Supplies API**
 
 ## Supply [/supplies/{supplyId}]
 
++ Headers
+    
+        Accept-Language: en-US
+
 + Model (application/json)
 
     + Body
@@ -22,10 +26,6 @@ Supply related resources of the **Supplies API**
                     { "rel": "self" , "href": "/message" }
               ]
             }
-            
-+ Headers
-    
-        Accept-Language: en-US
 
 ### Retrieve a Supply [GET]
 + Response 200
@@ -79,9 +79,32 @@ Supply related resources of the **Supplies API**
     + Body
 
             {
-              "data": [
-                    { }
-              ]
+                "results": [
+                            {
+                                "name": "name1",
+                                "links": [ 
+                                            {
+                                                "rel": "self",
+                                                "href": "http://api.zebra.com/supplies/1"
+                                            } 
+                                ]
+                            },
+                            {
+                                "name": "name2",
+                                "links": [ 
+                                            {
+                                                "rel": "self",
+                                                "href": "http://api.zebra.com/supplies/2"
+                                            }
+                                ]
+                            }
+                ],
+                "links": [
+                            {
+                                "rel": "self",
+                                "href": "http://api.zebra.com/supplies"
+                            }
+                ]
             }
 
 ### List all Supplies [GET]
