@@ -1,7 +1,7 @@
 FORMAT: 1A
 HOST: http://api.zebra.com
 
-# supplies
+# Zebra Supplies API
 Supplies API is a service used to find supplies for Zebra printers.
 
 # Group Supplies
@@ -17,20 +17,20 @@ Supply related resources of the **Supplies API**
     - type (required, string, `media, ribbon`)
     - printer (required, string, `105SL`) 
     - mediaType (required, string, `paper, synthetic`)
-    - width
-    - length
-    - distanceUnit
-    - printTech
-    - chemResist
-    - env
-    - maxTemp
-    - minTemp
-    - tempUnit
-    - adhesive
-    - surface
-    - surfaceShape
-    - surfaceCond
-    - acceptance
+    - width (optional, number, `11.10`)
+    - length (optional, number, `12.30`)
+    - distanceUnit (optional, string, `metric, imperial`)
+    - printTech (optional, string, `DT, TT`)
+    - chemResist (required, string, `none, weak, medium, strong`)
+    - env (required, string, `indoor, outdoor`)
+    - maxTemp (required, number, `-10`)
+    - minTemp (required, number, `40`)
+    - tempUnit (required, string, `C, F`)
+    - adhesive (optional, string, `permanent, removable`)
+    - surface (optional, string, `paper, plastic`)
+    - surfaceShape (optional, string, `smooth, rough`)
+    - surfaceCond (optional, string, `smooth, rough`)
+    - acceptance (optional, string, `none, CSA, UL`)
 
 + Response 200 (application/json)
 
