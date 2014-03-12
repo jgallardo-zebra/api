@@ -18,13 +18,26 @@ Supply related resources of the **Supplies API**
     + Body
 
             {
-              "class": [ "message" ],
-              "properties": { 
-                    "message": "Hello World!" 
-              },
-              "links": [
-                    { "rel": "self" , "href": "/message" }
-              ]
+                "name": "name1",
+                "description": "description1",
+                "number": "number1",
+                "width": 11.00,
+                "length": 12.00,
+                "distanceUnit": "metric",
+                "inStock": true,
+                "weight": 35.00,
+                "perforated": true,
+                "labelsPerRoll": 300,
+                "rollsPerPack": 25,
+                "comments": "this is a comment",
+                
+                
+                "links": [ 
+                    {
+                        "rel": "self",
+                        "href": "http://api.zebra.com/supplies/1"
+                    } 
+                ]
             }
 
 ### Retrieve a Supply [GET]
