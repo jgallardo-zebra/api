@@ -7,8 +7,12 @@ Notes API is a *short texts saving* service similar to its physical paper presen
 # Group Notes
 Notes related resources of the **Supplies API**
 
-## Supplies Collection [/supplies]
+## Supplies Collection [/supplies{?page,pageSize,sortBy,sort,type,printer,mediaType,width,length,distanceUnit,printTech,chemResist,env,maxTemp,minTemp,tempUnit,adhesive,surface,surfaceShape,surfaceCond,acceptance}]
 ### List all Notes [GET]
++ Parameters
+    - page (optional, number, `1`) ... Numeric `page` number of the search result list.
+    - pageSize (optional, number, `10`) ... Numeric `pageSize`
+
 + Response 200 (application/json)
 
         [{
@@ -18,32 +22,3 @@ Notes related resources of the **Supplies API**
         }, {
           "id": 2, "title": "Pick-up posters from post-office"
         }]
-
-### Create a Supply [POST]
-+ Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Supply [/notes/{id}]
-A single Supply object with all its details
-
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-
-### Retrieve a Supply [GET]
-+ Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: The Value
-
-    + Body
-
-            { "id": 2, "title": "Pick-up posters from post-office" }
-
-### Remove a Note [DELETE]
-+ Response 204
