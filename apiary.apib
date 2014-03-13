@@ -18,6 +18,8 @@ Supply related resources of the **Supplies API**
     + Body
 
             {
+                "id": 1,
+                "type": "media",
                 "name": "name1",
                 "description": "description1",
                 "number": "number1",
@@ -30,13 +32,71 @@ Supply related resources of the **Supplies API**
                 "labelsPerRoll": 300,
                 "rollsPerPack": 25,
                 "comments": "this is a comment",
-                
-                
+                "madeToOrder": false,
+                "minServiceTemp": -10,
+                "maxServiceTemp": 20,
+                "tempUnit": "C",
+                "adhesive": "permanent",
+                "minAppTemp": 30,
+                "productType": "label",
+                "mediaType": "synthetic",
+                "printTech": "DT",
+                "chemResist": [ "alchohol", "ammonia" ],
+                "environment": [ "indoor", "outdoor" ],
+                "surface": [ "paper", "plastic" ],
+                "environment": [ "indoor", "outdoor" ],
+                "acceptance": [ "CSA" ],
+                "surfaceCondition": [ "clean", "dirty" ],
+                "surfaceShape": [ "smooth", "rough" ],
+                "printers": [ 
+                    {
+                        "id": 1,
+                        "name", "printer1",
+                        "supported": true,
+                        "active", true,
+                        "links": [ 
+                        {
+                            "rel": "self",
+                            "href": "http://api.zebra.com/printers/1"
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "name", "printer2",
+                        "supported": true,
+                        "active", false,
+                        "links": [ 
+                        {
+                            "rel": "self",
+                            "href": "http://api.zebra.com/printers/2"
+                        }
+                    }
+                ],
+                "ribbons": [ 
+                    {
+                        "id": 2,
+                        "type", "ribbon",
+                        "name": "name1",
+                        "description": "description1",
+                        "number": "number1",
+                        "width": 11.00,
+                        "length": 12.00,
+                        "distanceUnit": "metric",
+                        "inStock": true,
+                        "rpic": 10,
+                        "rpoc": 40,
+                        "links": [ 
+                        {
+                            "rel": "self",
+                            "href": "http://api.zebra.com/supplies/2"
+                        }
+                    }
+                ],
                 "links": [ 
                     {
                         "rel": "self",
                         "href": "http://api.zebra.com/supplies/1"
-                    } 
+                    }
                 ]
             }
 
@@ -116,6 +176,28 @@ Supply related resources of the **Supplies API**
                     {
                         "rel": "self",
                         "href": "http://api.zebra.com/supplies"
+                    },
+                    {
+                        "rel": "next",
+                        "href": "http://api.zebra.com/supplies/1"
+                    },
+                    {
+                        "rel": "previous",
+                        "href": "http://api.zebra.com/supplies/1"
+                    }
+                ],
+                "facets": [
+                    {
+                        "label": "chemical Resistance (2)",
+                        "href": "http://api.zebra.com/supplies"
+                    },
+                    {
+                        "rel": "next",
+                        "href": "http://api.zebra.com/supplies/1"
+                    },
+                    {
+                        "rel": "previous",
+                        "href": "http://api.zebra.com/supplies/1"
                     }
                 ]
             }
