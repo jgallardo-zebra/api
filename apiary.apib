@@ -115,9 +115,9 @@ Supply related resources of the **Supplies API**
         + Values
             + `asc`
             + `desc`
-    - type (required, string, `media, ribbon`)
-    - printer (required, string, `105SL`) 
-    - mediaType (required, string, `paper, synthetic`)
+    - type (optional, string, `media, ribbon`)
+    - printer (optional, string, `105SL`) 
+    - mediaType (optional, string, `paper, synthetic`)
     - width (optional, float, `11.10`)
     - length (optional, float, `12.30`)
     - distanceUnit (optional, string)
@@ -125,11 +125,11 @@ Supply related resources of the **Supplies API**
             + `metric`
             + `imperial`
     - printTech (optional, string, `DT, TT`)
-    - chemResist (required, string, `none, weak, medium, strong`)
-    - env (required, string, `indoor, outdoor`)
-    - maxTemp (required, integer, `-10`)
-    - minTemp (required, integer, `40`)
-    - tempUnit (required, string)
+    - chemResist (optional, string, `none, weak, medium, strong`)
+    - env (optional, string, `indoor, outdoor`)
+    - maxTemp (optional, integer, `-10`)
+    - minTemp (optional, integer, `40`)
+    - tempUnit (optional, string)
         + Values
             + `C`
             + `F`
@@ -139,7 +139,6 @@ Supply related resources of the **Supplies API**
     - surfaceCond (optional, string, `smooth, rough`)
     - acceptance (optional, string)
         + Values
-            + `none`
             + `CSA`
             + `UL`
             
@@ -154,21 +153,167 @@ Supply related resources of the **Supplies API**
             {
                 "results": [
                     {
+                        "id": 1,
+                        "type": "media",
                         "name": "name1",
+                        "description": "description1",
+                        "number": "number1",
+                        "width": 11.00,
+                        "length": 12.00,
+                        "distanceUnit": "metric",
+                        "inStock": true,
+                        "weight": 35.00,
+                        "perforated": true,
+                        "labelsPerRoll": 300,
+                        "rollsPerPack": 25,
+                        "comments": "this is a comment",
+                        "madeToOrder": false,
+                        "minServiceTemp": -10,
+                        "maxServiceTemp": 20,
+                        "tempUnit": "C",
+                        "adhesive": "permanent",
+                        "minAppTemp": 30,
+                        "productType": "label",
+                        "mediaType": "synthetic",
+                        "printTech": "DT",
+                        "chemResist": [ "alchohol", "ammonia" ],
+                        "environment": [ "indoor", "outdoor" ],
+                        "surface": [ "paper", "plastic" ],
+                        "environment": [ "indoor", "outdoor" ],
+                        "acceptance": [ "CSA" ],
+                        "surfaceCondition": [ "clean", "dirty" ],
+                        "surfaceShape": [ "smooth", "rough" ],
+                        "printers": [ 
+                            {
+                                "id": 1,
+                                "name", "printer1",
+                                "supported": true,
+                                "active", true,
+                                "links": [ 
+                                {
+                                    "rel": "self",
+                                    "href": "http://api.zebra.com/printers/1"
+                                }
+                            },
+                            {
+                                "id": 2,
+                                "name", "printer2",
+                                "supported": true,
+                                "active", false,
+                                "links": [ 
+                                {
+                                    "rel": "self",
+                                    "href": "http://api.zebra.com/printers/2"
+                                }
+                            }
+                        ],
+                        "ribbons": [ 
+                            {
+                                "id": 2,
+                                "type", "ribbon",
+                                "name": "name1",
+                                "description": "description1",
+                                "number": "number1",
+                                "width": 11.00,
+                                "length": 12.00,
+                                "distanceUnit": "metric",
+                                "inStock": true,
+                                "rpic": 10,
+                                "rpoc": 40,
+                                "links": [ 
+                                {
+                                    "rel": "self",
+                                    "href": "http://api.zebra.com/supplies/2"
+                                }
+                            }
+                        ],
                         "links": [ 
-                                    {
-                                        "rel": "self",
-                                        "href": "http://api.zebra.com/supplies/1"
-                                    } 
+                            {
+                                "rel": "self",
+                                "href": "http://api.zebra.com/supplies/1"
+                            }
                         ]
                     },
                     {
-                        "name": "name2",
+                        "id": 1,
+                        "type": "media",
+                        "name": "name1",
+                        "description": "description1",
+                        "number": "number1",
+                        "width": 11.00,
+                        "length": 12.00,
+                        "distanceUnit": "metric",
+                        "inStock": true,
+                        "weight": 35.00,
+                        "perforated": true,
+                        "labelsPerRoll": 300,
+                        "rollsPerPack": 25,
+                        "comments": "this is a comment",
+                        "madeToOrder": false,
+                        "minServiceTemp": -10,
+                        "maxServiceTemp": 20,
+                        "tempUnit": "C",
+                        "adhesive": "permanent",
+                        "minAppTemp": 30,
+                        "productType": "label",
+                        "mediaType": "synthetic",
+                        "printTech": "DT",
+                        "chemResist": [ "alchohol", "ammonia" ],
+                        "environment": [ "indoor", "outdoor" ],
+                        "surface": [ "paper", "plastic" ],
+                        "environment": [ "indoor", "outdoor" ],
+                        "acceptance": [ "CSA" ],
+                        "surfaceCondition": [ "clean", "dirty" ],
+                        "surfaceShape": [ "smooth", "rough" ],
+                        "printers": [ 
+                            {
+                                "id": 1,
+                                "name", "printer1",
+                                "supported": true,
+                                "active", true,
+                                "links": [ 
+                                {
+                                    "rel": "self",
+                                    "href": "http://api.zebra.com/printers/1"
+                                }
+                            },
+                            {
+                                "id": 2,
+                                "name", "printer2",
+                                "supported": true,
+                                "active", false,
+                                "links": [ 
+                                {
+                                    "rel": "self",
+                                    "href": "http://api.zebra.com/printers/2"
+                                }
+                            }
+                        ],
+                        "ribbons": [ 
+                            {
+                                "id": 2,
+                                "type", "ribbon",
+                                "name": "name1",
+                                "description": "description1",
+                                "number": "number1",
+                                "width": 11.00,
+                                "length": 12.00,
+                                "distanceUnit": "metric",
+                                "inStock": true,
+                                "rpic": 10,
+                                "rpoc": 40,
+                                "links": [ 
+                                {
+                                    "rel": "self",
+                                    "href": "http://api.zebra.com/supplies/2"
+                                }
+                            }
+                        ],
                         "links": [ 
-                                    {
-                                        "rel": "self",
-                                        "href": "http://api.zebra.com/supplies/2"
-                                    }
+                            {
+                                "rel": "self",
+                                "href": "http://api.zebra.com/supplies/1"
+                            }
                         ]
                     }
                 ],
