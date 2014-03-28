@@ -137,31 +137,31 @@ Supply related resources of the **Supplies API**
 ## Supplies Collection [/supplies{?showResults,?printer,?printTech,?productType,?materialType,?width,?length}]
             
 + Parameters
-    - showResults (optional, boolean)
+    - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
         + Values
             + `true`
             + `false`
-    - printer (optional, string, `105SL`)
-    - printTech (optional, string)
+    - printer (optional, string, `105SL`) ... Printer that supports the supply. 
+    - printTech (optional, string) ... Printer technology. Possible values `Direct Thermal` and `Thermal Transfer`
         + Values
             + `DT`
             + `TT`
-    - productType (optional, string)
+    - productType (optional, string) ... Supply product type. Possible values `Label`, `Tags`, `Receipts`, `Wristbands`, `Cards`
         + Values
             + `L`
             + `T`
             + `R`
             + `W`
             + `C`
-    - materialType (optional, string)
+    - materialType (optional, string) ... Supply material type. Possible values `Paper`, `Synthetic`, `Wax`, `Wax/Resin`, `Resin`
         + Values
             + `P`
             + `S`
             + `W`
             + `WR`
             + `R`
-    - width (optional, float, `11.10`)
-    - length (optional, float, `12.30`)
+    - width (optional, float, `11.10`) ... Width of the supply in inches. Follow the format `00.00`
+    - length (optional, float, `12.30`) ... Length of the supply in inches. Follow the format `00.00`
 
 + Model (application/json)
 
