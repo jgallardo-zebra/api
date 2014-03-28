@@ -392,3 +392,40 @@ Supply related resources of the **Supplies API**
 + Response 200
 
     [Supplies Collection][]
+    
+# Group Printers
+Printer related resources of the **Supplies API**
+
+## Printer [/supplies/{printerId}]
+
++ Headers
+    
+        Origin: www.zebra.com
+
++ Model (application/json)
+
+    + Body
+
+            {
+                "links": {
+                    "self": "http://localhost:9191/printers/105SL"
+                },
+                "id": "105SL",
+                "name": "105SL",
+                "printTechnology": [
+                    {
+                        "id": "TT",
+                        "label": "Thermal Transfer"
+                    },
+                    {
+                        "id": "DT",
+                        "label": "Direct Thermal"
+                    }
+                ],
+                "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/105sl.jpg"
+            }
+            
+### Retrieve a Supply [GET]
++ Response 200
+
+    [Printer][]       
