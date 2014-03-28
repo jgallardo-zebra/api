@@ -11,93 +11,106 @@ Supply related resources of the **Supplies API**
 
 + Headers
     
-        Accept-Language: en-US
+        Origin: www.zebra.com
 
 + Model (application/json)
 
     + Body
 
             {
-                "id": 1,
-                "type": "media",
-                "name": "name1",
-                "description": "description1",
-                "number": "number1",
-                "width": 11.00,
-                "length": 12.00,
-                "distanceUnit": "metric",
-                "inStock": true,
-                "weight": 35.00,
-                "perforated": true,
-                "labelsPerRoll": 300,
-                "rollsPerPack": 25,
-                "comments": "this is a comment",
-                "madeToOrder": false,
-                "minServiceTemp": -10,
-                "maxServiceTemp": 20,
-                "tempUnit": "C",
-                "adhesive": "permanent",
-                "minAppTemp": 30,
-                "productType": "label",
-                "mediaType": "synthetic",
-                "printTech": "DT",
-                "chemResist": [ "alchohol", "ammonia" ],
-                "environment": [ "indoor", "outdoor" ],
-                "surface": [ "paper", "plastic" ],
-                "environment": [ "indoor", "outdoor" ],
-                "acceptance": [ "CSA" ],
-                "surfaceCondition": [ "clean", "dirty" ],
-                "surfaceShape": [ "smooth", "rough" ],
-                "printers": [ 
+                "links": {
+                    "self": "http://localhost:9191/supplies/18951"
+                },
+                "id": "18951",
+                "name": "Z-Ultimate 3000T White",
+                "description": "Label Polyester 4 x 2in Thermal Transfer Zebra Z-Ultimate 3000T 3 in core 4 Rolls/Carton",
+                "width": 4,
+                "length": 2,
+                "printers": [
                     {
-                        "id": 1,
-                        "name", "printer1",
-                        "supported": true,
-                        "active", true,
-                        "links": [ 
-                        {
-                            "rel": "self",
-                            "href": "http://api.zebra.com/printers/1"
-                        }
+                        "links": {},
+                        "id": "105SL",
+                        "name": "105SL",
+                        "printTechnology": [
+                            {
+                                "id": "TT",
+                                "label": "Thermal Transfer"
+                            },
+                            {
+                                "id": "DT",
+                                "label": "Direct Thermal"
+                            }
+                        ],
+                        "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/105sl.jpg"
                     },
                     {
-                        "id": 2,
-                        "name", "printer2",
-                        "supported": true,
-                        "active", false,
-                        "links": [ 
-                        {
-                            "rel": "self",
-                            "href": "http://api.zebra.com/printers/2"
-                        }
+                        "links": {},
+                        "id": "S4M",
+                        "name": "S4M",
+                        "printTechnology": [
+                            {
+                                "id": "TT",
+                                "label": "Thermal Transfer"
+                            },
+                            {
+                                "id": "DT",
+                                "label": "Direct Thermal"
+                            }
+                        ],
+                        "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/s4m.jpg"
+                    },
+                ],
+                "ribbons": [
+                    {
+                        "links": {},
+                        "id": "05095BK11045",
+                        "name": "5100",
+                        "description": "5100 Premium Resin:  Resin ribbon for dense black images in harsh environments. Great choice for printed circuit board applications. ",
+                        "width": 1.57,
+                        "length": 1476,
+                        "rollsPerInnerCarton": 48,
+                        "rollsPerOuterCarton": 48,
+                        "printTechnology": {
+                            "id": "TT",
+                            "label": "Thermal Transfer"
+                        },
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "MZ320",
+                                "name": "MZ320",
+                                "printTechnology": [
+                                    {
+                                        "id": "DT",
+                                        "label": "Direct Thermal"
+                                    }
+                                ],
+                                "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/mobile/mz-320.jpg"
+                            }
+                        ],
+                        "specLink": null
                     }
                 ],
-                "ribbons": [ 
-                    {
-                        "id": 2,
-                        "type", "ribbon",
-                        "name": "name1",
-                        "description": "description1",
-                        "number": "number1",
-                        "width": 11.00,
-                        "length": 12.00,
-                        "distanceUnit": "metric",
-                        "inStock": true,
-                        "rpic": 10,
-                        "rpoc": 40,
-                        "links": [ 
-                        {
-                            "rel": "self",
-                            "href": "http://api.zebra.com/supplies/2"
-                        }
-                    }
-                ],
-                "links": [ 
-                    {
-                        "rel": "self",
-                        "href": "http://api.zebra.com/supplies/1"
-                    }
-                ]
+                "printTechnology": {
+                    "id": "TT",
+                    "label": "Thermal Transfer"
+                },
+                "productType": {
+                    "id": "L",
+                    "label": "Labels"
+                },
+                "materialType": {
+                    "id": "S",
+                    "label": "Synthetic"
+                },
+                "adhesive": {
+                    "id": "P",
+                    "label": "Permanent"
+                },
+                "perforated": true,
+                "labelsPerRoll": 2950,
+                "rollsPerPack": 4,
+                "specLink": "http://z03s-dayauth01:4502/content/dam/zebra/product-information/en-us/brochures-datasheets/supplies-accessories/zipship-labels-tags-en-us.pdf"
             }
 
 ### Retrieve a Supply [GET]
@@ -105,18 +118,22 @@ Supply related resources of the **Supplies API**
 
     [Supply][]
 
-## Supplies Collection [/supplies{?page,?pageSize,?sortBy,?sort,?type,?printer,?mediaType,?width,?length,?distanceUnit,?printTech,?chemResist,?env,?maxTemp,?minTemp,?tempUnit,?adhesive,?surface,?surfaceShape,?surfaceCond,?acceptance}]
+## Supplies Collection [/supplies{?printer,?printTech,?productType,?mediaType,?width,?length,?distanceUnit,?chemResist,?env,?maxTemp,?minTemp,?tempUnit,?adhesive,?surface,?surfaceShape,?surfaceCond,?acceptance}]
             
 + Parameters
-    - page = `1` (optional, integer, `1`) 
-    - pageSize = `10` (optional, integer, `10`)
-    - sortBy (optional, string, `width, length, perforation`)
-    - sort (optional, string)
+    - printer (optional, string, `105SL`)
+    - printTech (optional, string)
         + Values
-            + `asc`
-            + `desc`
+            + `DT`
+            + `TT`
+    - productType (optional, string)
+        + Values
+            + `L` Labels
+            + `T`
+            + `R`
+            + `W`
+            + `C`
     - type (optional, string, `media, ribbon`)
-    - printer (optional, string, `105SL`) 
     - mediaType (optional, string, `paper, synthetic`)
     - width (optional, float, `11.10`)
     - length (optional, float, `12.30`)
@@ -124,7 +141,7 @@ Supply related resources of the **Supplies API**
         + Values
             + `metric`
             + `imperial`
-    - printTech (optional, string, `DT, TT`)
+    
     - chemResist (optional, string, `none, weak, medium, strong`)
     - env (optional, string, `indoor, outdoor`)
     - maxTemp (optional, integer, `-10`)
