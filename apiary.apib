@@ -117,6 +117,16 @@ Supply related resources of the **Supplies API**
 + Response 200
 
     [Supply][]
+    
+### Check Service Options [OPTIONS]
++ Response 200
+    + Headers
+
+            Access-Control-Allow-Credentials: true
+            Access-Control-Allow-Headers: Content-Type
+            Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
+            Access-Control-Allow-Origin: *
+            Access-Control-Max-Age: 60
 
 ## Supplies Collection [/supplies{?showResults,?printer,?printTech,?productType,?materialType,?width,?length}]
             
@@ -486,7 +496,7 @@ Printer related resources of the **Supplies API**
                 "total": 2
             }
 
-### List all Printerts [GET]
+### List all Printers [GET]
 + Response 200
 
     [Printers Collection][]
