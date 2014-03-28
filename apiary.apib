@@ -118,9 +118,13 @@ Supply related resources of the **Supplies API**
 
     [Supply][]
 
-## Supplies Collection [/supplies{?printer,?printTech,?productType,?mediaType,?width,?length,?distanceUnit,?chemResist,?env,?maxTemp,?minTemp,?tempUnit,?adhesive,?surface,?surfaceShape,?surfaceCond,?acceptance}]
+## Supplies Collection [/supplies{?showResults,?printer,?printTech,?productType,?materialType,?width,?length}]
             
 + Parameters
+    - showResults (optional, boolean)
+        + Values
+            + `true`
+            + `false`
     - printer (optional, string, `105SL`)
     - printTech (optional, string)
         + Values
@@ -128,37 +132,21 @@ Supply related resources of the **Supplies API**
             + `TT`
     - productType (optional, string)
         + Values
-            + `L` Labels
+            + `L`
             + `T`
             + `R`
             + `W`
             + `C`
-    - type (optional, string, `media, ribbon`)
-    - mediaType (optional, string, `paper, synthetic`)
+    - materialType (optional, string)
+        + Values
+            + `P`
+            + `S`
+            + `W`
+            + `WR`
+            + `R`
     - width (optional, float, `11.10`)
     - length (optional, float, `12.30`)
-    - distanceUnit (optional, string)
-        + Values
-            + `metric`
-            + `imperial`
     
-    - chemResist (optional, string, `none, weak, medium, strong`)
-    - env (optional, string, `indoor, outdoor`)
-    - maxTemp (optional, integer, `-10`)
-    - minTemp (optional, integer, `40`)
-    - tempUnit (optional, string)
-        + Values
-            + `C`
-            + `F`
-    - adhesive (optional, string, `permanent, removable`)
-    - surface (optional, string, `paper, plastic`)
-    - surfaceShape (optional, string, `smooth, rough`)
-    - surfaceCond (optional, string, `smooth, rough`)
-    - acceptance (optional, string)
-        + Values
-            + `CSA`
-            + `UL`
-            
 + Headers
     
         Accept-Language: en-US
