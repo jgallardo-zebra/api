@@ -118,7 +118,7 @@ Supply related resources of the **Supplies API**
 
     [Supply][]
     
-### Check Service Options [OPTIONS]
+### Retrieve a Supply [OPTIONS]
 + Response 200
     + Headers
 
@@ -403,7 +403,7 @@ Supply related resources of the **Supplies API**
 
     [Supplies Collection][]
     
-### Check Service Options [OPTIONS]
+### List all Supplies [OPTIONS]
 + Response 200
     + Headers
 
@@ -448,7 +448,17 @@ Printer related resources of the **Supplies API**
 ### Retrieve a Printer [GET]
 + Response 200
 
-    [Printer][]       
+    [Printer][]
+
+### Retrieve a Printer [OPTIONS]
++ Response 200
+    + Headers
+
+            Access-Control-Allow-Credentials: true
+            Access-Control-Allow-Headers: Content-Type
+            Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
+            Access-Control-Allow-Origin: *
+            Access-Control-Max-Age: 60
 
 ## Printers Collection [/printers]
 
@@ -510,3 +520,13 @@ Printer related resources of the **Supplies API**
 + Response 200
 
     [Printers Collection][]
+    
+### List all Printers [OPTIONS]
++ Response 200
+    + Headers
+
+            Access-Control-Allow-Credentials: true
+            Access-Control-Allow-Headers: Content-Type
+            Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
+            Access-Control-Allow-Origin: *
+            Access-Control-Max-Age: 60
