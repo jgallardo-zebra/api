@@ -134,7 +134,7 @@ Supply related resources of the **Supplies API**
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
 
-## Supplies Collection [/supplies{?showResults,?printer,?printTech,?productType,?materialType,?width,?length}]
+## Supplies Collection [/supplies{?showResults,?printer,?printTech,?productType,?materialType,?width,?length,?ribbonApp,?cardTech,?cardThick}]
             
 + Parameters
     - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
@@ -153,15 +153,35 @@ Supply related resources of the **Supplies API**
             + `R`
             + `W`
             + `C`
-    - materialType (optional, string) ... Supply material type. Possible values `Paper`, `Synthetic`, `Wax`, `Wax/Resin`, `Resin`
+    - materialType (optional, string) ... Supply material type. Possible values `Paper`, `Synthetic`, `Wax`, `Wax/Resin`, `Resin`, `White PVC` , `Color PVC`, `Recycled PVC`, `Composite`, `Translucent Hologram`
         + Values
             + `P`
             + `S`
             + `W`
             + `WR`
             + `R`
+            + `WPVC`
+            + `CPVC`
+            + `RPVC`
+            + `COMP`
+            + `T`
     - width (optional, float, `11.10`) ... Width of the supply in inches. Follow the format `00.00`
     - length (optional, float, `12.30`) ... Length of the supply in inches. Follow the format `00.00`
+    - ribbonApp (optional, string) ... Ribbon capacity. Possible values `Standard`, `High`
+        + Values
+            + `S`
+            + `H`
+    - cardTech (optional, string) ... Card technology. Possible values `None` , `MS`, `RFID`, `MiFare`, `Prox`
+        + Values
+            + `NONE`
+            + `MS`
+            + `RFID`
+            + `MF`
+            + `P`
+    - cardThick (optional, string, `100`) ... Card thickness in microns. 
+    - dmar (optional, string) ... Setting this parameter with the corresponding DMAR value will return the SKU in the payload and filter out the ones that dont have one assigned by the DMAR
+        + Values
+            + `CDW`
 
 + Model (application/json)
 
