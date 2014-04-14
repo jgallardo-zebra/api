@@ -299,8 +299,8 @@ Supply related resources of the **Supplies API**
 Printer related resources of the **Supplies API**
 
 ## Printer [/printers/{printerId}]
-
-+ Headers
++ Request
+    + Headers
     
         Origin: www.zebra.com
 
@@ -342,7 +342,12 @@ Printer related resources of the **Supplies API**
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
 
-## Printers Collection [/printers]
+## Printers Collection [/printers{?dmar}]
+
++ Parameters
+    - dmar (optional, string) ... Setting this parameter with the corresponding DMAR value will return printers that the DMAR has supplies for
+        + Values
+            + `CDW`
 
 + Model (application/json)
 
