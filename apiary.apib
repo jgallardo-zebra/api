@@ -202,17 +202,38 @@ Supply related resources of the **Supplies API**
 
             {
                 "links": {
-                    "self": "http://localhost:9191/supplies?cardThick=10&dmar=CDW"
+                    "self": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW"
                 },
                 "resources": [
                     {
                         "links": {
-                            "self": "http://localhost:9191/supplies/104523-210"
+                            "self": "http://z77s-dapiapp01:9091/supplies/104523-210"
                         },
                         "id": "104523-210",
                         "name": "Premier PVC Blank White CR-80 Cards",
                         "description": "10 mil PVC card",
-                        "printers": [],
+                        "additionalInfo": "This is a placeholder for additional info",
+                        "dmarDescription": "This is a placeholder for DMAR descriptions",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP1",
+                                "name": "ZXP Series 1",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                            },
+                            {
+                                "links": {},
+                                "id": "ZXP3",
+                                "name": "ZXP Series 3",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-3.png"
+                            },
+                            {
+                                "links": {},
+                                "id": "ZXP7",
+                                "name": "ZXP Series 7",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                            }
+                        ],
                         "productType": {
                             "id": "C",
                             "label": "Cards"
@@ -221,22 +242,36 @@ Supply related resources of the **Supplies API**
                             "id": "WPVC",
                             "label": "White PVC"
                         },
+                        "amountInFeetPerRoll": 10,
                         "cardsPerBox": 500,
                         "cardTechnology": {
                             "id": "NONE",
                             "label": "None"
                         },
                         "cardThickness": 10,
-                        "dmarSku": "1069066"
+                        "color": {
+                            "id": "FLO",
+                            "label": "FL Orange"
+                        },
+                        "dmarSku": "2647875"
                     },
                     {
                         "links": {
-                            "self": "http://localhost:9191/supplies/104523-010"
+                            "self": "http://z77s-dapiapp01:9091/supplies/104523-010"
                         },
                         "id": "104523-010",
                         "name": "Premier PVC Blank White CR-80 Cards",
                         "description": "10 mil Adhesive back cards with 14 mil Mylar® release liner, 24 mil total thickness",
-                        "printers": [],
+                        "additionalInfo": "This is a placeholder for additional info",
+                        "dmarDescription": "This is a placeholder for DMAR descriptions",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP7",
+                                "name": "ZXP Series 7",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                            }
+                        ],
                         "productType": {
                             "id": "C",
                             "label": "Cards"
@@ -245,13 +280,18 @@ Supply related resources of the **Supplies API**
                             "id": "WPVC",
                             "label": "White PVC"
                         },
+                        "amountInFeetPerRoll": 10,
                         "cardsPerBox": 500,
                         "cardTechnology": {
                             "id": "NONE",
                             "label": "None"
                         },
                         "cardThickness": 10,
-                        "dmarSku": "1069066"
+                        "color": {
+                            "id": "PU",
+                            "label": "Purple"
+                        },
+                        "dmarSku": "505232"
                     }
                 ],
                 "facets": {
@@ -260,7 +300,7 @@ Supply related resources of the **Supplies API**
                             "label": "None",
                             "value": "NONE",
                             "count": 2,
-                            "link": "http://localhost:9191/supplies?cardThick=10&dmar=CDW&cardTech=NONE"
+                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&cardTech=NONE"
                         }
                     ],
                     "materialType": [
@@ -268,7 +308,27 @@ Supply related resources of the **Supplies API**
                             "label": "White PVC",
                             "value": "WPVC",
                             "count": 2,
-                            "link": "http://localhost:9191/supplies?cardThick=10&dmar=CDW&materialType=WPVC"
+                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&materialType=WPVC"
+                        }
+                    ],
+                    "printer": [
+                        {
+                            "label": "ZXP Series 1",
+                            "value": "ZXP1",
+                            "count": 1,
+                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&printer=ZXP1"
+                        },
+                        {
+                            "label": "ZXP Series 3",
+                            "value": "ZXP3",
+                            "count": 1,
+                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&printer=ZXP3"
+                        },
+                        {
+                            "label": "ZXP Series 7",
+                            "value": "ZXP7",
+                            "count": 2,
+                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&printer=ZXP7"
                         }
                     ],
                     "productType": [
@@ -276,7 +336,7 @@ Supply related resources of the **Supplies API**
                             "label": "Cards",
                             "value": "C",
                             "count": 2,
-                            "link": "http://localhost:9191/supplies?cardThick=10&dmar=CDW&productType=C"
+                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&productType=C"
                         }
                     ]
                 },
