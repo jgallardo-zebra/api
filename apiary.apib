@@ -512,3 +512,263 @@ Printer related resources of the **Supplies API**
             Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
+
+# Group Accessories
+Accessories related resources of the **Supplies API**
+
+## Accessory [/accessories/{accessoryId}]
++ Request
+    + Headers
+    
+        Origin: www.zebra.com
+
++ Model (application/json)
+
+    + Body
+
+            {
+                "links": {
+                    "self": "http://test-api.zebra.com/accessories/105999-101"
+                },
+                "id": "105999-101",
+                "name": "Cleaning Kit",
+                "description": "4 print engine cleaning cards and 4 feeder cleaning cards (1000 prints/card)",
+                "printers": [
+                    {
+                        "links": {},
+                        "id": "ZXP1",
+                        "name": "ZXP Series 1",
+                        "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                    }
+                ]
+            }
+            
+### GET [GET]
++ Response 200
+
+    [Accessory][]
+
+### OPTIONS [OPTIONS]
++ Response 200
+    + Headers
+
+            Access-Control-Allow-Credentials: true
+            Access-Control-Allow-Headers: Content-Type
+            Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
+            Access-Control-Allow-Origin: *
+            Access-Control-Max-Age: 60
+
+## Accessories Collection [/accessories{?showResults,?printer,?dmar}]
+
++ Parameters
+    - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
+        + Values
+            + `true`
+            + `false`
+    - printer (optional, string, `105SL`) ... Printer that supports the supply. 
+    - dmar (optional, string) ... Setting this parameter with the corresponding DMAR value will return printers that the DMAR has supplies for
+        + Values
+            + `CDW`
+
++ Model (application/json)
+
+    + Body
+
+            {
+                "links": {
+                    "self": "http://test-api.zebra.com/accessories?showResults=true&dmar=CDW"
+                },
+                "resources": [
+                    {
+                        "links": {
+                            "self": "http://test-api.zebra.com/accessories/105999-101"
+                        },
+                        "id": "105999-101",
+                        "name": "Cleaning Kit",
+                        "description": "4 print engine cleaning cards and 4 feeder cleaning cards (1000 prints/card)",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP1",
+                                "name": "ZXP Series 1",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                            }
+                        ],
+                        "dmarSku": "3169923"
+                    },
+                    {
+                        "links": {
+                            "self": "http://test-api.zebra.com/accessories/105999-302"
+                        },
+                        "id": "105999-302",
+                        "name": "Cleaning Kit",
+                        "description": "4 print engine cleaning cards and 4 feeder cleaning cards (1000 prints/card)",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP3",
+                                "name": "ZXP Series 3",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-3.png"
+                            }
+                        ],
+                        "dmarSku": "3125630"
+                    },
+                    {
+                        "links": {
+                            "self": "http://test-api.zebra.com/accessories/105999-701"
+                        },
+                        "id": "105999-701",
+                        "name": "Cleaning Kit",
+                        "description": "Print Station Cleaning Kit (Includes 12 feeder and print path cleaning cards for 60,000 prints)",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP7",
+                                "name": "ZXP Series 7",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                            }
+                        ],
+                        "dmarSku": "3012235"
+                    },
+                    {
+                        "links": {
+                            "self": "http://test-api.zebra.com/accessories/105912-003"
+                        },
+                        "id": "105912-003",
+                        "name": "Cleaning Kit",
+                        "description": "Adhesive cleaning rollers, set of 5",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP7",
+                                "name": "ZXP Series 7",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                            }
+                        ],
+                        "dmarSku": "594860"
+                    },
+                    {
+                        "links": {
+                            "self": "http://test-api.zebra.com/accessories/105999-705"
+                        },
+                        "id": "105999-705",
+                        "name": "Cleaning Kit",
+                        "description": "Abrasive printhead polishing card",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP7",
+                                "name": "ZXP Series 7",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                            }
+                        ],
+                        "dmarSku": "3049006"
+                    },
+                    {
+                        "links": {
+                            "self": "http://test-api.zebra.com/accessories/105909G-057"
+                        },
+                        "id": "105909G-057",
+                        "name": "Cleaning swab kit",
+                        "description": "Box of 24 swabs for all printers",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP1",
+                                "name": "ZXP Series 1",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                            },
+                            {
+                                "links": {},
+                                "id": "ZXP3",
+                                "name": "ZXP Series 3",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-3.png"
+                            },
+                            {
+                                "links": {},
+                                "id": "ZXP7",
+                                "name": "ZXP Series 7",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                            }
+                        ],
+                        "dmarSku": "2563072"
+                    },
+                    {
+                        "links": {
+                            "self": "http://test-api.zebra.com/accessories/800117-002"
+                        },
+                        "id": "800117-002",
+                        "name": "Cleaning Pens",
+                        "description": "Box of 12 pens for all printers",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP1",
+                                "name": "ZXP Series 1",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                            },
+                            {
+                                "links": {},
+                                "id": "ZXP3",
+                                "name": "ZXP Series 3",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-3.png"
+                            },
+                            {
+                                "links": {},
+                                "id": "ZXP7",
+                                "name": "ZXP Series 7",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                            }
+                        ],
+                        "dmarSku": "2531233"
+                    }
+                ],
+                "facets": {
+                    "printer": [
+                        {
+                            "label": "ZXP Series 1",
+                            "value": "ZXP1",
+                            "count": 3,
+                            "link": "http://test-api.zebra.com/accessories?showResults=true&dmar=CDW&printer=ZXP1"
+                        },
+                        {
+                            "label": "ZXP Series 3",
+                            "value": "ZXP3",
+                            "count": 3,
+                            "link": "http://test-api.zebra.com/accessories?showResults=true&dmar=CDW&printer=ZXP3"
+                        },
+                        {
+                            "label": "ZXP Series 7",
+                            "value": "ZXP7",
+                            "count": 5,
+                            "link": "http://test-api.zebra.com/accessories?showResults=true&dmar=CDW&printer=ZXP7"
+                        }
+                    ]
+                },
+                "total": 7
+            }
+
+### GET [GET]
++ Request
+    + Headers
+    
+            Origin: www.zebra.com
+
++ Response 200
+
+    [Printers Collection][]
+    
+### OPTIONS [OPTIONS]
++ Request
+    + Headers
+    
+            Origin: www.zebra.com
+
++ Response 200
+    + Headers
+
+            Access-Control-Allow-Credentials: true
+            Access-Control-Allow-Headers: Content-Type
+            Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
+            Access-Control-Allow-Origin: *
+            Access-Control-Max-Age: 60
