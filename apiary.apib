@@ -4,10 +4,10 @@ HOST: http://api.zebra.com
 # Zebra Supplies API
 Supplies API is a service used to find supplies for Zebra printers.
 
-# Group Supplies
-Supply related resources of the **Supplies API**
+# Group Materials
+Materials related resources of the **Supplies API**
 
-## Supply [/supplies/{supplyId}]
+## Material [/materials/{materialId}]
 
 + Model (application/json)
 
@@ -15,7 +15,7 @@ Supply related resources of the **Supplies API**
 
             {
                 "links": {
-                    "self": "http://localhost:9191/supplies/18951"
+                    "self": "http://localhost:9191/materials/18951"
                 },
                 "id": "18951",
                 "name": "Z-Ultimate 3000T White",
@@ -117,7 +117,7 @@ Supply related resources of the **Supplies API**
 
 + Response 200
 
-    [Supply][]
+    [Material][]
     
 ### OPTIONS [OPTIONS]
 + Request
@@ -134,7 +134,7 @@ Supply related resources of the **Supplies API**
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
 
-## Supplies Collection [/supplies{?showResults,?printer,?printTech,?productType,?materialType,?width,?length,?ribbonApp,?cardTech,?cardThick,?dmar,?ribbonColor,?color}]
+## Materials Collection [/materials{?showResults,?printer,?printTech,?productType,?materialType,?width,?length,?ribbonApp,?cardTech,?cardThick,?dmar,?ribbonColor,?color}]
             
 + Parameters
     - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
@@ -218,12 +218,12 @@ Supply related resources of the **Supplies API**
 
             {
                 "links": {
-                    "self": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW"
+                    "self": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW"
                 },
                 "resources": [
                     {
                         "links": {
-                            "self": "http://z77s-dapiapp01:9091/supplies/104523-210"
+                            "self": "http://z77s-dapiapp01:9091/materials/104523-210"
                         },
                         "id": "104523-210",
                         "name": "Premier PVC Blank White CR-80 Cards",
@@ -273,7 +273,7 @@ Supply related resources of the **Supplies API**
                     },
                     {
                         "links": {
-                            "self": "http://z77s-dapiapp01:9091/supplies/104523-010"
+                            "self": "http://z77s-dapiapp01:9091/materials/104523-010"
                         },
                         "id": "104523-010",
                         "name": "Premier PVC Blank White CR-80 Cards",
@@ -316,7 +316,7 @@ Supply related resources of the **Supplies API**
                             "label": "None",
                             "value": "NONE",
                             "count": 2,
-                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&cardTech=NONE"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&cardTech=NONE"
                         }
                     ],
                     "materialType": [
@@ -324,7 +324,7 @@ Supply related resources of the **Supplies API**
                             "label": "White PVC",
                             "value": "WPVC",
                             "count": 2,
-                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&materialType=WPVC"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&materialType=WPVC"
                         }
                     ],
                     "printer": [
@@ -332,19 +332,19 @@ Supply related resources of the **Supplies API**
                             "label": "ZXP Series 1",
                             "value": "ZXP1",
                             "count": 1,
-                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&printer=ZXP1"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP1"
                         },
                         {
                             "label": "ZXP Series 3",
                             "value": "ZXP3",
                             "count": 1,
-                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&printer=ZXP3"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP3"
                         },
                         {
                             "label": "ZXP Series 7",
                             "value": "ZXP7",
                             "count": 2,
-                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&printer=ZXP7"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP7"
                         }
                     ],
                     "productType": [
@@ -352,7 +352,7 @@ Supply related resources of the **Supplies API**
                             "label": "Cards",
                             "value": "C",
                             "count": 2,
-                            "link": "http://z77s-dapiapp01:9091/supplies?cardThick=10&dmar=CDW&productType=C"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&productType=C"
                         }
                     ]
                 },
@@ -367,7 +367,7 @@ Supply related resources of the **Supplies API**
 
 + Response 200
 
-    [Supplies Collection][]
+    [Materials Collection][]
     
 ### OPTIONS [OPTIONS]
 + Request
