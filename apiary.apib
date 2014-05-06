@@ -522,10 +522,10 @@ Printer related resources of the **Supplies API**
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
 
-# Group Accessories
-Accessories related resources of the **Supplies API**
+# Group CleaningKits
+Cleaning Kit related resources of the **Supplies API**
 
-## Accessory [/accessories/{accessoryId}]
+## CleaningKit [/cleaningkits/{cleaningkitId}]
 + Request
     + Headers
     
@@ -537,7 +537,7 @@ Accessories related resources of the **Supplies API**
 
             {
                 "links": {
-                    "self": "http://test-api.zebra.com/accessories/105999-101"
+                    "self": "http://test-api.zebra.com/cleaningkits/105999-101"
                 },
                 "id": "105999-101",
                 "name": "Cleaning Kit",
@@ -555,7 +555,7 @@ Accessories related resources of the **Supplies API**
 ### GET [GET]
 + Response 200
 
-    [Accessory][]
+    [CleaningKit][]
 
 ### OPTIONS [OPTIONS]
 + Response 200
@@ -567,7 +567,7 @@ Accessories related resources of the **Supplies API**
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
 
-## Accessories Collection [/accessories{?showResults,?printer,?dmar}]
+## CleaningKit Collection [/cleaningkits{?showResults,?printer,?dmar}]
 
 + Parameters
     - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
@@ -585,12 +585,12 @@ Accessories related resources of the **Supplies API**
 
             {
                 "links": {
-                    "self": "http://test-api.zebra.com/accessories?showResults=true&dmar=CDW"
+                    "self": "http://test-api.zebra.com/cleaningkits?showResults=true&dmar=CDW"
                 },
                 "resources": [
                     {
                         "links": {
-                            "self": "http://test-api.zebra.com/accessories/105999-101"
+                            "self": "http://test-api.zebra.com/cleaningkits/105999-101"
                         },
                         "id": "105999-101",
                         "name": "Cleaning Kit",
@@ -607,7 +607,7 @@ Accessories related resources of the **Supplies API**
                     },
                     {
                         "links": {
-                            "self": "http://test-api.zebra.com/accessories/105999-302"
+                            "self": "http://test-api.zebra.com/cleaningkits/105999-302"
                         },
                         "id": "105999-302",
                         "name": "Cleaning Kit",
@@ -624,7 +624,7 @@ Accessories related resources of the **Supplies API**
                     },
                     {
                         "links": {
-                            "self": "http://test-api.zebra.com/accessories/105999-701"
+                            "self": "http://test-api.zebra.com/cleaningkits/105999-701"
                         },
                         "id": "105999-701",
                         "name": "Cleaning Kit",
@@ -641,7 +641,7 @@ Accessories related resources of the **Supplies API**
                     },
                     {
                         "links": {
-                            "self": "http://test-api.zebra.com/accessories/105912-003"
+                            "self": "http://test-api.zebra.com/cleaningkits/105912-003"
                         },
                         "id": "105912-003",
                         "name": "Cleaning Kit",
@@ -658,7 +658,7 @@ Accessories related resources of the **Supplies API**
                     },
                     {
                         "links": {
-                            "self": "http://test-api.zebra.com/accessories/105999-705"
+                            "self": "http://test-api.zebra.com/cleaningkits/105999-705"
                         },
                         "id": "105999-705",
                         "name": "Cleaning Kit",
@@ -675,7 +675,7 @@ Accessories related resources of the **Supplies API**
                     },
                     {
                         "links": {
-                            "self": "http://test-api.zebra.com/accessories/105909G-057"
+                            "self": "http://test-api.zebra.com/cleaningkits/105909G-057"
                         },
                         "id": "105909G-057",
                         "name": "Cleaning swab kit",
@@ -704,7 +704,7 @@ Accessories related resources of the **Supplies API**
                     },
                     {
                         "links": {
-                            "self": "http://test-api.zebra.com/accessories/800117-002"
+                            "self": "http://test-api.zebra.com/cleaningkits/800117-002"
                         },
                         "id": "800117-002",
                         "name": "Cleaning Pens",
@@ -738,19 +738,19 @@ Accessories related resources of the **Supplies API**
                             "label": "ZXP Series 1",
                             "value": "ZXP1",
                             "count": 3,
-                            "link": "http://test-api.zebra.com/accessories?showResults=true&dmar=CDW&printer=ZXP1"
+                            "link": "http://test-api.zebra.com/cleaningkits?showResults=true&dmar=CDW&printer=ZXP1"
                         },
                         {
                             "label": "ZXP Series 3",
                             "value": "ZXP3",
                             "count": 3,
-                            "link": "http://test-api.zebra.com/accessories?showResults=true&dmar=CDW&printer=ZXP3"
+                            "link": "http://test-api.zebra.com/cleaningkits?showResults=true&dmar=CDW&printer=ZXP3"
                         },
                         {
                             "label": "ZXP Series 7",
                             "value": "ZXP7",
                             "count": 5,
-                            "link": "http://test-api.zebra.com/accessories?showResults=true&dmar=CDW&printer=ZXP7"
+                            "link": "http://test-api.zebra.com/cleaningkits?showResults=true&dmar=CDW&printer=ZXP7"
                         }
                     ]
                 },
@@ -765,7 +765,7 @@ Accessories related resources of the **Supplies API**
 
 + Response 200
 
-    [Printers Collection][]
+    [CleaningKit Collection][]
     
 ### OPTIONS [OPTIONS]
 + Request
