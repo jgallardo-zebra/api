@@ -134,7 +134,7 @@ Materials related resources of the **Supplies API**
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
 
-## Materials Collection [/materials{?showResults,?printer,?printTech,?productType,?materialType,?width,?length,?ribbonApp,?cardTech,?cardThick,?dmar,?ribbonColor,?color}]
+## Materials Collection [/materials{?showResults,?printer,?printTech,?productType,?materialType,?width,?length,?ribbonApp,?cardTech,?cardThick,?dmar,?color}]
             
 + Parameters
     - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
@@ -183,18 +183,6 @@ Materials related resources of the **Supplies API**
         + Values
             + `CDW`
             + `PCC`
-    - ribbonColor (optional, string) ... Ribbon capacity. Possible values `Full Color`, `Monochrome - Black`, `Monochrome - White`, `Monochrome - Red`, `Monochrome - Blue`, `Monochrome - Metallic Gold`, `Monochrome - Metallic Silver`, `Monochrome - Gold`, `Monochrome - Silver`, `Monochrome - Scratch-off Grey`
-        + Values
-            + `FC`
-            + `MCBLK`
-            + `MCW`
-            + `MCR`
-            + `MCBLU`
-            + `MCMG`
-            + `MCMS`
-            + `MCG`
-            + `MCS`
-            + `MCSO`
     - color (optional, string) ... Material color. Possible values `Blue`, `Clear`, `FL Orange`, `Green`, `Light Green`, `Light Pink`, `Multiple`, `Orange`, `Pink`, `Purple`, `Red`, `White`, `Yellow`, `Gold Metallic`, `Silver Metallic`
         + Values
             + `B`
