@@ -940,3 +940,184 @@ Ribbon related resources of the **Supplies API**
             Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+# Group Partner
+Partner related resources of the **Zebra API**
+
+## Partner [/ribbons/{ribbonId}]
++ Request
+    + Headers
+    
+        Origin: www.zebra.com
+
++ Model (application/json)
+
+    + Body
+
+            {
+                "links": {
+                    "self": "http://localhost:9191/ribbons/800011-101"
+                },
+                "id": "800011-101",
+                "name": "Load-N-Go™ Print Ribbons",
+                "description": "Zebra Load-N-Go™ monochrome ribbon for ZXP Series 1 Black",
+                "printers": [
+                    {
+                        "links": {},
+                        "id": "ZXP1",
+                        "name": "ZXP Series 1",
+                        "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                    }
+                ],
+                "ribbonApplication": {
+                    "id": "S",
+                    "label": "Standard"
+                },
+                "imagesPerRoll": 1000,
+                "ribbonColor": {
+                    "id": "MCBLK",
+                    "label": "Monochrome - Black"
+                }
+            }
+            
+### GET [GET]
+
++ Response 200
+
+    [Partner][]
+
+### OPTIONS [OPTIONS]
++ Request
+    + Headers
+    
+            Origin: www.zebra.com
+
++ Response 200
+    + Headers
+
+            Access-Control-Allow-Credentials: true
+            Access-Control-Allow-Headers: Content-Type
+            Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
+            Access-Control-Allow-Origin: *
+            Access-Control-Max-Age: 60
+
+## Partner Collection [/ribbons{?showResults,?printer,?ribbonColor,?dmar}]
+
++ Parameters
+    - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
+        + Values
+            + `true`
+            + `false`
+    - printer (optional, string, `105SL`) ... Printer that supports the supply. 
+    - ribbonColor (optional, string) ... Ribbon capacity. Possible values `Full Color`, `Monochrome - Black`, `Monochrome - White`, `Monochrome - Red`, `Monochrome - Blue`, `Monochrome - Metallic Gold`, `Monochrome - Metallic Silver`, `Monochrome - Gold`, `Monochrome - Silver`, `Monochrome - Scratch-off Grey`
+        + Values
+            + `FC`
+            + `MCBLK`
+            + `MCW`
+            + `MCR`
+            + `MCBLU`
+            + `MCMG`
+            + `MCMS`
+            + `MCG`
+            + `MCS`
+            + `MCSO`
+    - dmar (optional, string) ... Setting this parameter with the corresponding DMAR value will return printers that the DMAR has supplies for
+        + Values
+            + `CDW`
+            + `PCC`
+
++ Model (application/json)
+
+    + Body
+
+            {
+                "links": {
+                    "self": "http://localhost:9191/ribbons?dmar=PCC&ribbonColor=MCBLK"
+                },
+                "resources": [
+                    {
+                        "links": {
+                            "self": "http://localhost:9191/ribbons/800011-101"
+                        },
+                        "id": "800011-101",
+                        "name": "Load-N-Go™ Print Ribbons",
+                        "description": "Zebra Load-N-Go™ monochrome ribbon for ZXP Series 1 Black",
+                        "printers": [
+                            {
+                                "links": {},
+                                "id": "ZXP1",
+                                "name": "ZXP Series 1",
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                            }
+                        ],
+                        "ribbonApplication": {
+                            "id": "S",
+                            "label": "Standard"
+                        },
+                        "imagesPerRoll": 1000,
+                        "ribbonColor": {
+                            "id": "MCBLK",
+                            "label": "Monochrome - Black"
+                        }
+                    }
+                ],
+                "facets": {
+                    "printer": [
+                        {
+                            "label": "ZXP Series 1",
+                            "value": "ZXP1",
+                            "count": 1,
+                            "link": "http://localhost:9191/ribbons?dmar=PCC&ribbonColor=MCBLK&printer=ZXP1"
+                        }
+                    ]
+                },
+                "total": 1
+            }
+
+### GET [GET]
++ Request
+    + Headers
+    
+            Origin: www.zebra.com
+
++ Response 200
+
+    [Partner Collection][]
+    
+### OPTIONS [OPTIONS]
++ Request
+    + Headers
+    
+            Origin: www.zebra.com
+
++ Response 200
+    + Headers
+
+            Access-Control-Allow-Credentials: true
+            Access-Control-Allow-Headers: Content-Type
+            Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
+            Access-Control-Allow-Origin: *
+            Access-Control-Max-Age: 60
