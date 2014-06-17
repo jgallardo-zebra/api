@@ -1097,13 +1097,21 @@ Partner related resources of the **Zebra API**
     - type (optional, string) ... The Partner type. Possible values `ISV`
         + Values
             + `ISV`
-    - region (optional, string) ... The region of the Partner. Multi-value support. Possible values 
-    - vertical (optional, string)  ... The Market Vertical of the Partner. Multi-value support. Possible values 
-    - application (optional, string) ... The Application of the Partner. Multi-value support. Possible values 
+    - region (optional, string) ... The region of the Partner. Multi-value support. Possible values `APAC`, `EMEA`, `Latin America`, `North America`
+        + Values
+            + `APAC`
+            + `EMEA`
+            + `LATAM`
+            + `NA`
+    - vertical (optional, string)  ... The Market Vertical of the Partner. Multi-value support. Possible values `Retail`, `Manufacturing`, `T&L`, `Hospitality`, `Healthcare`, `Finance & Banking`, `Services`, `Government`
+    - application (optional, string) ... The Application of the Partner. Multi-value support. Possible values `Asset Management`, `Card Applications   Device Management   Direct Store Delivery   Electronic Citation`, ` Field Service   Hospitality Solution`, `Kiosk   Labeling`, `Mobile POS`, `  Mobile Printing`, ` Mobile Workforce`, `Patient Management`, `  Merchandising   Point of Sale   RFID`, `Supply Chain`, `Traceability`, `Warehouse Management`, `Loyalty Cards`, `Secure Instant issuance`
     - sortBy (optional, string) ... The field to sort the list.
         + Values
             + `name`
-    - sortOrder (optional, string)
+    - sortOrder (optional, string) ... The order to sort the list
+        + Values
+            + `asc`
+            + `desc`
 
 + Model (application/json)
 
