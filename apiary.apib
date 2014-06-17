@@ -979,28 +979,91 @@ Partner related resources of the **Zebra API**
 
             {
                 "links": {
-                    "self": "http://localhost:9191/ribbons/800011-101"
+                    "self": "http://localhost:9091/v1/partners/chimera"
                 },
-                "id": "800011-101",
-                "name": "Load-N-Go™ Print Ribbons",
-                "description": "Zebra Load-N-Go™ monochrome ribbon for ZXP Series 1 Black",
-                "printers": [
+                "id": "chimera",
+                "type": {
+                    "id": "ISV",
+                    "label": "ISV"
+                },
+                "name": "Chimera Solutions",
+                "description": "Chimera Solutions (Represented by ABMAK QATAR) is specialized in delivering a wide range of technology turnkey solutions. With strong strategic partnerships such as the tie up with Zebra & Motorola Solutions, Chimera Solutions has built a reputable name in the hospitality technology, government, retail / supply chain, healthcare verticals and in many other niche markets. The ability of offering dedicated value added services and commitment in making each project an ongoing success has made Chimera Solutions the provider of choice for many of the most renowned companies in the middle east.",
+                "url": "http://www.chimerasol.com/",
+                "logo": "http://www.zebra.com/content/dam/zebra/logos-icons/isv-partners/chimera.png",
+                "regions": [
                     {
-                        "links": {},
-                        "id": "ZXP1",
-                        "name": "ZXP Series 1",
-                        "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                        "id": "EMEA",
+                        "label": "Europe and Middle East"
                     }
                 ],
-                "ribbonApplication": {
-                    "id": "S",
-                    "label": "Standard"
-                },
-                "imagesPerRoll": 1000,
-                "ribbonColor": {
-                    "id": "MCBLK",
-                    "label": "Monochrome - Black"
-                }
+                "verticalMarkets": [
+                    {
+                        "id": "R",
+                        "label": "Retail"
+                    },
+                    {
+                        "id": "M",
+                        "label": "Manufacturing"
+                    },
+                    {
+                        "id": "TL",
+                        "label": "T&L"
+                    },
+                    {
+                        "id": "HOSP",
+                        "label": "Hospitality"
+                    },
+                    {
+                        "id": "HC",
+                        "label": "Healthcare"
+                    },
+                    {
+                        "id": "FB",
+                        "label": "Finance & Banking"
+                    },
+                    {
+                        "id": "S",
+                        "label": "Services"
+                    },
+                    {
+                        "id": "G",
+                        "label": "Government "
+                    }
+                ],
+                "applications": [
+                    {
+                        "id": "CA",
+                        "label": "Card Applications"
+                    },
+                    {
+                        "id": "HS",
+                        "label": "Hospitality Solution"
+                    },
+                    {
+                        "id": "L",
+                        "label": "Labeling"
+                    },
+                    {
+                        "id": "PM",
+                        "label": "Patient Management"
+                    },
+                    {
+                        "id": "M",
+                        "label": "Merchandising"
+                    },
+                    {
+                        "id": "SC",
+                        "label": "Supply Chain"
+                    },
+                    {
+                        "id": "T",
+                        "label": "Traceability"
+                    },
+                    {
+                        "id": "LC",
+                        "label": "Loyalty Cards"
+                    }
+                ]
             }
             
 ### GET [GET]
@@ -1055,42 +1118,213 @@ Partner related resources of the **Zebra API**
 
             {
                 "links": {
-                    "self": "http://localhost:9191/ribbons?dmar=PCC&ribbonColor=MCBLK"
+                    "self": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M"
                 },
                 "resources": [
                     {
                         "links": {
-                            "self": "http://localhost:9191/ribbons/800011-101"
+                            "self": "http://localhost:9091/v1/partners/chimera"
                         },
-                        "id": "800011-101",
-                        "name": "Load-N-Go™ Print Ribbons",
-                        "description": "Zebra Load-N-Go™ monochrome ribbon for ZXP Series 1 Black",
-                        "printers": [
+                        "id": "chimera",
+                        "type": {
+                            "id": "ISV",
+                            "label": "ISV"
+                        },
+                        "name": "Chimera Solutions",
+                        "description": "Chimera Solutions (Represented by ABMAK QATAR) is specialized in delivering a wide range of technology turnkey solutions. With strong strategic partnerships such as the tie up with Zebra & Motorola Solutions, Chimera Solutions has built a reputable name in the hospitality technology, government, retail / supply chain, healthcare verticals and in many other niche markets. The ability of offering dedicated value added services and commitment in making each project an ongoing success has made Chimera Solutions the provider of choice for many of the most renowned companies in the middle east.",
+                        "url": "http://www.chimerasol.com/",
+                        "logo": "http://www.zebra.com/content/dam/zebra/logos-icons/isv-partners/chimera.png",
+                        "regions": [
                             {
-                                "links": {},
-                                "id": "ZXP1",
-                                "name": "ZXP Series 1",
-                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                                "id": "EMEA",
+                                "label": "Europe and Middle East"
                             }
                         ],
-                        "ribbonApplication": {
-                            "id": "S",
-                            "label": "Standard"
-                        },
-                        "imagesPerRoll": 1000,
-                        "ribbonColor": {
-                            "id": "MCBLK",
-                            "label": "Monochrome - Black"
-                        }
+                        "verticalMarkets": [
+                            {
+                                "id": "R",
+                                "label": "Retail"
+                            },
+                            {
+                                "id": "M",
+                                "label": "Manufacturing"
+                            },
+                            {
+                                "id": "TL",
+                                "label": "T&L"
+                            },
+                            {
+                                "id": "HOSP",
+                                "label": "Hospitality"
+                            },
+                            {
+                                "id": "HC",
+                                "label": "Healthcare"
+                            },
+                            {
+                                "id": "FB",
+                                "label": "Finance & Banking"
+                            },
+                            {
+                                "id": "S",
+                                "label": "Services"
+                            },
+                            {
+                                "id": "G",
+                                "label": "Government "
+                            }
+                        ],
+                        "applications": [
+                            {
+                                "id": "CA",
+                                "label": "Card Applications"
+                            },
+                            {
+                                "id": "HS",
+                                "label": "Hospitality Solution"
+                            },
+                            {
+                                "id": "L",
+                                "label": "Labeling"
+                            },
+                            {
+                                "id": "PM",
+                                "label": "Patient Management"
+                            },
+                            {
+                                "id": "M",
+                                "label": "Merchandising"
+                            },
+                            {
+                                "id": "SC",
+                                "label": "Supply Chain"
+                            },
+                            {
+                                "id": "T",
+                                "label": "Traceability"
+                            },
+                            {
+                                "id": "LC",
+                                "label": "Loyalty Cards"
+                            }
+                        ]
                     }
                 ],
                 "facets": {
-                    "printer": [
+                    "region": [
                         {
-                            "label": "ZXP Series 1",
-                            "value": "ZXP1",
+                            "label": "Europe and Middle East",
+                            "value": "EMEA",
                             "count": 1,
-                            "link": "http://localhost:9191/ribbons?dmar=PCC&ribbonColor=MCBLK&printer=ZXP1"
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&region=EMEA"
+                        }
+                    ],
+                    "vertical": [
+                        {
+                            "label": "Finance & Banking",
+                            "value": "FB",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&vertical=FB"
+                        },
+                        {
+                            "label": "Government ",
+                            "value": "G",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&vertical=G"
+                        },
+                        {
+                            "label": "Healthcare",
+                            "value": "HC",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&vertical=HC"
+                        },
+                        {
+                            "label": "Hospitality",
+                            "value": "HOSP",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&vertical=HOSP"
+                        },
+                        {
+                            "label": "Manufacturing",
+                            "value": "M",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&vertical=M"
+                        },
+                        {
+                            "label": "Retail",
+                            "value": "R",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&vertical=R"
+                        },
+                        {
+                            "label": "Services",
+                            "value": "S",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&vertical=S"
+                        },
+                        {
+                            "label": "T&L",
+                            "value": "TL",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&vertical=TL"
+                        }
+                    ],
+                    "application": [
+                        {
+                            "label": "Card Applications",
+                            "value": "CA",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&application=CA"
+                        },
+                        {
+                            "label": "Hospitality Solution",
+                            "value": "HS",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&application=HS"
+                        },
+                        {
+                            "label": "Labeling",
+                            "value": "L",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&application=L"
+                        },
+                        {
+                            "label": "Loyalty Cards",
+                            "value": "LC",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&application=LC"
+                        },
+                        {
+                            "label": "Merchandising",
+                            "value": "M",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&application=M"
+                        },
+                        {
+                            "label": "Patient Management",
+                            "value": "PM",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&application=PM"
+                        },
+                        {
+                            "label": "Supply Chain",
+                            "value": "SC",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&application=SC"
+                        },
+                        {
+                            "label": "Traceability",
+                            "value": "T",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&application=T"
+                        }
+                    ],
+                    "type": [
+                        {
+                            "label": "ISV",
+                            "value": "ISV",
+                            "count": 1,
+                            "link": "http://localhost:9091/v1/partners?showResults=true&vertical=FB&vertical=HOSP&application=M&type=ISV"
                         }
                     ]
                 },
