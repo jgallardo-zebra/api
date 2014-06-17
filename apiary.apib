@@ -1087,30 +1087,23 @@ Partner related resources of the **Zebra API**
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
 
-## Partner Collection [/partners{?showResults,?printer,?ribbonColor,?dmar}]
+## Partner Collection [/partners{?showResults,?type,?region,?vertical,?application,?sortBy,?sortOrder}]
 
 + Parameters
     - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
         + Values
             + `true`
             + `false`
-    - printer (optional, string, `105SL`) ... Printer that supports the supply. 
-    - ribbonColor (optional, string) ... Ribbon capacity. Possible values `Full Color`, `Monochrome - Black`, `Monochrome - White`, `Monochrome - Red`, `Monochrome - Blue`, `Monochrome - Metallic Gold`, `Monochrome - Metallic Silver`, `Monochrome - Gold`, `Monochrome - Silver`, `Monochrome - Scratch-off Grey`
+    - type (optional, string) ... The Partner type. Possible values `ISV`
         + Values
-            + `FC`
-            + `MCBLK`
-            + `MCW`
-            + `MCR`
-            + `MCBLU`
-            + `MCMG`
-            + `MCMS`
-            + `MCG`
-            + `MCS`
-            + `MCSO`
-    - dmar (optional, string) ... Setting this parameter with the corresponding DMAR value will return printers that the DMAR has supplies for
+            + `ISV`
+    - region (optional, string) ... The region of the Partner. Multi-value support. Possible values 
+    - vertical (optional, string)  ... The Market Vertical of the Partner. Multi-value support. Possible values 
+    - application (optional, string) ... The Application of the Partner. Multi-value support. Possible values 
+    - sortBy (optional, string) ... The field to sort the list.
         + Values
-            + `CDW`
-            + `PCC`
+            + `name`
+    - sortOrder (optional, string)
 
 + Model (application/json)
 
