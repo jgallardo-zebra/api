@@ -7,8 +7,13 @@ Content API is a service developed by Zebra Technologies
 # Group Materials
 Materials related resources of the **Supplies API**
 
-## Material [/materials/{materialId}]
+## Material [/materials/{materialId}?{printhead}]
 
++ Parameters
+    - printhead (optional, boolean) ... Setting this parameter to true allows to return only the printers that have related printheads.
+        + Values
+            + `true`
+            + `false`
 + Model (application/json)
 
     + Body
@@ -103,10 +108,23 @@ Materials related resources of the **Supplies API**
                     "id": "P",
                     "label": "Permanent"
                 },
-                "perforated": true,
-                "labelsPerRoll": 2950,
-                "rollsPerPack": 4,
-                "specLink": "http://z03s-dayauth01:4502/content/dam/zebra/product-information/en-us/brochures-datasheets/supplies-accessories/zipship-labels-tags-en-us.pdf"
+                "perforated": {
+                    "id":"TRUE",
+                    "label":"Yes"
+                },
+                "amountPerRoll":2950,
+                "quantityPerCarton":4,
+                "color": {
+                    "id":"W",
+                    "label":"White"
+                },
+                "detailedSpecs":"http://www.zebra.com/content/dam/zebra/product-information/en-us/brochures-datasheets/supplies-accessories/sst/materials/z-ultimate-3000t-en-us.pdf",
+                "preferred": {
+                    "id":"FALSE",
+                    "label":"No"
+                },
+                "listPrice":181.88999938964844,
+                "partNumberDescription":"Label, Polyester, 4 x 2in, Thermal Transfer, Z-Ultimate 3000T, 3 in core, 4 Rolls/Carton"
             }
 
 ### GET  [GET]
