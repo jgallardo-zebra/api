@@ -42,7 +42,29 @@ Materials related resources of the **Supplies API**
                                 "label": "Direct Thermal"
                             }
                         ],
-                        "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/105sl.jpg"
+                        "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/105sl.jpg",
+                        "printerType": {
+                            "id":"Tabletop",
+                            "label":"Tabletop"
+                        },
+                        "printHeads": [
+                            {
+                                "links":{},
+                                "id":"G32432-1M",
+                                "dpi":"203",
+                                "listPrice":520.0,
+                                "printers":[],
+                                "partNumberDescription":"Printhead, 105SL, 203 dpi"
+                            },
+                            {
+                                "links":{},
+                                "id":"G32433M",
+                                "dpi":"300",
+                                "listPrice":575.0,
+                                "printers":[],
+                                "partNumberDescription":"Printhead, 105SL, 300 dpi"
+                            }
+                        ]
                     },
                     {
                         "links": {},
@@ -58,7 +80,29 @@ Materials related resources of the **Supplies API**
                                 "label": "Direct Thermal"
                             }
                         ],
-                        "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/s4m.jpg"
+                        "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/s4m.jpg",
+                        "printerType": {
+                            "id":"Tabletop",
+                            "label":"Tabletop"
+                        },
+                        "printHeads": [
+                            {
+                                "links":{},
+                                "id":"G41400M",
+                                "dpi":"203",
+                                "listPrice":480.0,
+                                "printers":[],
+                                "partNumberDescription":"Printhead, S4M, 203 dpi"
+                            },
+                            {
+                                "links":{},
+                                "id":"G41401M",
+                                "dpi":"300",
+                                "listPrice":560.0,
+                                "printers":[],
+                                "partNumberDescription":"Printhead, S4M, 300 dpi"
+                            }
+                        ]
                     },
                 ],
                 "ribbons": [
@@ -152,7 +196,7 @@ Materials related resources of the **Supplies API**
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
 
-## Materials Collection [/materials?{showResults,printer,printTech,productType,materialType,width,length,ribbonApp,cardTech,cardThick,dmar,color}]
+## Materials Collection [/materials?{showResults,printer,printTech,productType,materialType,width,length,ribbonApp,cardTech,cardThick,dmar,color,printhead}]
             
 + Parameters
     - showResults (optional, boolean) ... Setting this parameter to false allows to return a lightweight response without the actual search results. Quite useful when used in multi-step wizards and only the facets or number of hits are needed.
@@ -218,6 +262,10 @@ Materials related resources of the **Supplies API**
             + `Y`
             + `GM`
             + `SM`
+    - printhead (optional, boolean) ... Setting this parameter to true allows to return only the printers that have related printheads.
+        + Values
+            + `true`
+            + `false`
 
 + Model (application/json)
 
@@ -242,19 +290,23 @@ Materials related resources of the **Supplies API**
                                 "links": {},
                                 "id": "ZXP1",
                                 "name": "ZXP Series 1",
-                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png"
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp1-faceit-hopper.png",
+                                "printHeads": []
+                                
                             },
                             {
                                 "links": {},
                                 "id": "ZXP3",
                                 "name": "ZXP Series 3",
-                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-3.png"
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-3.png",
+                                "printHeads": []
                             },
                             {
                                 "links": {},
                                 "id": "ZXP7",
                                 "name": "ZXP Series 7",
-                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png",
+                                "printHeads": []
                             }
                         ],
                         "productType": {
@@ -292,7 +344,8 @@ Materials related resources of the **Supplies API**
                                 "links": {},
                                 "id": "ZXP7",
                                 "name": "ZXP Series 7",
-                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png"
+                                "imageLink": "http://www.zebra.com/content/dam/zebra/photography/product/card/zxp-series-7.png",
+                                "printHeads": []
                             }
                         ],
                         "productType": {
@@ -339,19 +392,22 @@ Materials related resources of the **Supplies API**
                             "label": "ZXP Series 1",
                             "value": "ZXP1",
                             "count": 1,
-                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP1"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP1",
+                            "printHeads": []
                         },
                         {
                             "label": "ZXP Series 3",
                             "value": "ZXP3",
                             "count": 1,
-                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP3"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP3",
+                            "printHeads": []
                         },
                         {
                             "label": "ZXP Series 7",
                             "value": "ZXP7",
                             "count": 2,
-                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP7"
+                            "link": "http://z77s-dapiapp01:9091/materials?cardThick=10&dmar=CDW&printer=ZXP7",
+                            "printHeads": []
                         }
                     ],
                     "productType": [
@@ -420,7 +476,29 @@ Printer related resources of the **Supplies API**
                         "label": "Direct Thermal"
                     }
                 ],
-                "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/105sl.jpg"
+                "imageLink": "http://z03s-dayauth01:4502/content/dam/zebra/photography/product/industrial/105sl.jpg",
+                "printerType": {
+                    "id":"Tabletop",
+                    "label":"Tabletop"
+                },
+                "printHeads": [
+                    {
+                        "links":{},
+                        "id":"G32432-1M",
+                        "dpi":"203",
+                        "listPrice":520.0,
+                        "printers":[],
+                        "partNumberDescription":"Printhead, 105SL, 203 dpi"
+                    },
+                    {
+                        "links":{},
+                        "id":"G32433M",
+                        "dpi":"300",
+                        "listPrice":575.0,
+                        "printers":[],
+                        "partNumberDescription":"Printhead, 105SL, 300 dpi"
+                    }
+                ]
             }
             
 ### GET [GET]
