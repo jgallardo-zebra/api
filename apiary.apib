@@ -1512,6 +1512,7 @@ Partner related resources of the **Zebra API**
             Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
             Access-Control-Allow-Origin: *
             Access-Control-Max-Age: 60
+            
 # Group Printheads
 Printhead related resources of the **Supplies API**
 
@@ -1535,6 +1536,67 @@ Printhead related resources of the **Supplies API**
                 "printers":[],
                 "partNumberDescription":"Printhead, G-Series, DT, 203 dpi"
             }
+            
+### GET [GET]
++ Request
+    + Headers
+    
+            Origin: www.zebra.com
+
++ Response 200
+
+    [Partner Collection][]
+    
+### OPTIONS [OPTIONS]
++ Request
+    + Headers
+    
+            Origin: www.zebra.com
+
++ Response 200
+    + Headers
+
+            Access-Control-Allow-Credentials: true
+            Access-Control-Allow-Headers: Content-Type
+            Access-Control-Allow-Methods: GET,POST,DELETE,OPTIONS
+            Access-Control-Allow-Origin: *
+            Access-Control-Max-Age: 60
+            
+## Printhead Collection [/printheads]
+
++ Model (application/json)
+
+    + Body
+    
+            { 
+                "links": {
+                    "self":"http://localhost:9091/v1/printheads"
+                },
+                "resources":[
+                    {
+                        "links": {
+                            "self":"http://localhost:9091/v1/printheads/105934-037"
+                        },
+                        "id":"105934-037",
+                        "dpi":"203",
+                        "listPrice":126.0,
+                        "printers":[],
+                        "partNumberDescription":"Printhead, G-Series, DT, 203 dpi"
+                    },
+                    {
+                        "links": {
+                            "self":"http://localhost:9091/v1/printheads/105934-038"
+                        },
+                        "id":"105934-038",
+                        "dpi":"203",
+                        "listPrice":126.0,
+                        "printers":[],
+                        "partNumberDescription":"Printhead, G-Series, TT, 203 dpi"
+                    },
+                ],
+                "total":2
+            }
+            
 ### GET [GET]
 + Request
     + Headers
